@@ -293,7 +293,13 @@
                             <outlet property="delegate" destination="aeS-Cy-qFZ" id="KqS-Ow-F3S"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Nova Avaliação" id="bbE-5B-Kth"/>
+                    <navigationItem key="navigationItem" title="Nova Avaliação" id="bbE-5B-Kth">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="Utp-T0-NVy">
+                            <connections>
+                                <action selector="salvarAvaliacao:" destination="aeS-Cy-qFZ" id="nZ1-q3-doc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dataSelecionada" destination="1Q4-xu-VNF" id="iGG-Q9-vS3"/>
                         <outlet property="datePicker" destination="CfZ-Px-68P" id="vhI-Ow-pQQ"/>

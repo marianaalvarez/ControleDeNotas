@@ -28,4 +28,9 @@ class NovaAvaliacaoTableViewController: UITableViewController {
         var dataEntrega = dateFormatter.stringFromDate(datePicker.date)
         self.dataSelecionada.text = dataEntrega
     }
+    
+    @IBAction func salvarAvaliacao(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
 }
