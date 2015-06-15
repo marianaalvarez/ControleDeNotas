@@ -16,6 +16,8 @@
 		05D46C7B1B222B25007F1031 /* SemNomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D46C7A1B222B25007F1031 /* SemNomeTests.swift */; };
 		05DA20041B2236D00000424E /* DisciplinasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA20031B2236D00000424E /* DisciplinasTableViewController.swift */; };
 		05DA20061B223A6A0000424E /* AvaliacoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA20051B223A6A0000424E /* AvaliacoesTableViewController.swift */; };
+		05DA20081B2F30250000424E /* NovaDisciplinaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA20071B2F30250000424E /* NovaDisciplinaTableViewController.swift */; };
+		05DA200A1B2F362A0000424E /* NovaAvaliacaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA20091B2F362A0000424E /* NovaAvaliacaoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		05D46C7A1B222B25007F1031 /* SemNomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemNomeTests.swift; sourceTree = "<group>"; };
 		05DA20031B2236D00000424E /* DisciplinasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinasTableViewController.swift; sourceTree = "<group>"; };
 		05DA20051B223A6A0000424E /* AvaliacoesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacoesTableViewController.swift; sourceTree = "<group>"; };
+		05DA20071B2F30250000424E /* NovaDisciplinaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovaDisciplinaTableViewController.swift; sourceTree = "<group>"; };
+		05DA20091B2F362A0000424E /* NovaAvaliacaoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovaAvaliacaoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				05D46C611B222B25007F1031 /* AppDelegate.swift */,
 				05DA20031B2236D00000424E /* DisciplinasTableViewController.swift */,
 				05DA20051B223A6A0000424E /* AvaliacoesTableViewController.swift */,
+				05DA20071B2F30250000424E /* NovaDisciplinaTableViewController.swift */,
+				05DA20091B2F362A0000424E /* NovaAvaliacaoTableViewController.swift */,
 				05D46C661B222B25007F1031 /* ViewController.swift */,
 				05D46C681B222B25007F1031 /* Main.storyboard */,
 				05D46C6B1B222B25007F1031 /* Images.xcassets */,
@@ -221,9 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05DA200A1B2F362A0000424E /* NovaAvaliacaoTableViewController.swift in Sources */,
 				05D46C671B222B25007F1031 /* ViewController.swift in Sources */,
 				05DA20041B2236D00000424E /* DisciplinasTableViewController.swift in Sources */,
 				05DA20061B223A6A0000424E /* AvaliacoesTableViewController.swift in Sources */,
+				05DA20081B2F30250000424E /* NovaDisciplinaTableViewController.swift in Sources */,
 				05D46C651B222B25007F1031 /* SemNome.xcdatamodeld in Sources */,
 				05D46C621B222B25007F1031 /* AppDelegate.swift in Sources */,
 			);
