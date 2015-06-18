@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="disciplinaCell" textLabel="oBy-TH-8CI" rowHeight="61" style="IBUITableViewCellStyleDefault" id="tcC-4D-WND">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ceulaDisciplina" textLabel="oBy-TH-8CI" rowHeight="61" style="IBUITableViewCellStyleDefault" id="tcC-4D-WND">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tcC-4D-WND" id="xfK-JJ-T1e">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -113,6 +113,58 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="vij-Jy-aNr">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="69" id="xj4-gF-Ta9">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xj4-gF-Ta9" id="eVB-2T-bID">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Semestre da Disciplina" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVk-dv-xaf">
+                                                    <rect key="frame" x="8" y="8" width="584" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.98431372549999996" green="0.019579467020000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Semestre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zam-Gc-9Sy">
+                                                    <rect key="frame" x="8" y="30" width="584" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="CLY-wz-QKH"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Fyw-4n-0qv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="CLY-wz-QKH"/>
+                                                        </mask>
+                                                    </variation>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zam-Gc-9Sy" firstAttribute="leading" secondItem="eVB-2T-bID" secondAttribute="leadingMargin" id="0A4-AW-Jwb"/>
+                                                <constraint firstItem="XVk-dv-xaf" firstAttribute="top" secondItem="eVB-2T-bID" secondAttribute="topMargin" id="2VU-up-QVB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zam-Gc-9Sy" secondAttribute="bottom" constant="0.5" id="FPm-ZK-qfB"/>
+                                                <constraint firstItem="zam-Gc-9Sy" firstAttribute="leading" secondItem="eVB-2T-bID" secondAttribute="leadingMargin" id="MUc-oz-TCv"/>
+                                                <constraint firstItem="zam-Gc-9Sy" firstAttribute="trailing" secondItem="eVB-2T-bID" secondAttribute="trailingMargin" id="NWq-SH-VgE"/>
+                                                <constraint firstItem="zam-Gc-9Sy" firstAttribute="top" secondItem="XVk-dv-xaf" secondAttribute="bottom" constant="8" id="OuW-Fz-ngO"/>
+                                                <constraint firstItem="XVk-dv-xaf" firstAttribute="trailing" secondItem="eVB-2T-bID" secondAttribute="trailingMargin" id="Xsp-dp-gSu"/>
+                                                <constraint firstItem="XVk-dv-xaf" firstAttribute="leading" secondItem="eVB-2T-bID" secondAttribute="leadingMargin" id="YnJ-be-G4F"/>
+                                                <constraint firstItem="zam-Gc-9Sy" firstAttribute="trailing" secondItem="eVB-2T-bID" secondAttribute="trailingMargin" id="Z6m-2e-IkI"/>
+                                                <constraint firstItem="zam-Gc-9Sy" firstAttribute="top" secondItem="XVk-dv-xaf" secondAttribute="bottom" constant="7.5" id="cjL-Mi-V1q"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="FPm-ZK-qfB"/>
+                                                    <exclude reference="MUc-oz-TCv"/>
+                                                    <exclude reference="OuW-Fz-ngO"/>
+                                                    <exclude reference="NWq-SH-VgE"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="jcc-GO-yb7" id="hZo-Gx-epN"/>
@@ -128,6 +180,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nomeDisciplina" destination="dwL-RZ-3fn" id="kWm-Od-Gcd"/>
+                        <outlet property="semestreDisciplina" destination="zam-Gc-9Sy" id="AlG-YT-Dp2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0B-GJ-zFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
