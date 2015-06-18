@@ -16,7 +16,6 @@ class DisciplinasTableViewController: UITableViewController, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.title = "Disciplinas"
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -41,7 +40,7 @@ class DisciplinasTableViewController: UITableViewController, UITableViewDataSour
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let item = disciplinas[indexPath.row]
-        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ceulaDisciplina") as! UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("ceulaDisciplina") as! UITableViewCell
         
         cell.textLabel?.text = item.nome
         cell.detailTextLabel?.text = "Semestre: \(item.semestre)"
@@ -52,7 +51,9 @@ class DisciplinasTableViewController: UITableViewController, UITableViewDataSour
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+        if let destino = segue.destinationViewController as? AvaliacoesTableViewController {
+            destino.disciplina = disciplinas[tableView.indexPathForSelectedRow()!.row]
+        }
     }
 
 }
