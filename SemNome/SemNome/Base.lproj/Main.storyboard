@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qtV-Km-BNL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0BD-pn-ACl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -441,6 +441,38 @@
             </objects>
             <point key="canvasLocation" x="1540" y="881"/>
         </scene>
+        <!--Inicio View Controller-->
+        <scene sceneID="dRO-XP-hHo">
+            <objects>
+                <viewController id="0BD-pn-ACl" customClass="InicioViewController" customModule="SemNome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ybI-hj-hgY"/>
+                        <viewControllerLayoutGuide type="bottom" id="amP-rZ-foM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FeO-nK-MbD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="jyl-RU-Wc4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="jyl-RU-Wc4" secondAttribute="trailing" constant="-16" id="Qgi-eq-RvC"/>
+                            <constraint firstItem="amP-rZ-foM" firstAttribute="top" secondItem="jyl-RU-Wc4" secondAttribute="bottom" id="VNI-2W-4Pd"/>
+                            <constraint firstItem="jyl-RU-Wc4" firstAttribute="leading" secondItem="FeO-nK-MbD" secondAttribute="leadingMargin" constant="-16" id="ZjQ-Jy-8bj"/>
+                            <constraint firstItem="jyl-RU-Wc4" firstAttribute="top" secondItem="FeO-nK-MbD" secondAttribute="topMargin" id="eSe-6E-ui6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="qtV-Km-BNL" kind="presentation" identifier="segueInicial" modalTransitionStyle="crossDissolve" id="fjd-6B-uvF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3oI-Q8-sZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1517" y="132"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0uh-Es-cQN">
             <objects>
@@ -565,6 +597,7 @@
     <resources>
         <image name="calendarioIcone" width="32" height="32"/>
         <image name="calendarioIconeSelecionado" width="32" height="32"/>
+        <image name="logo" width="400" height="400"/>
         <image name="notasIcone" width="32" height="32"/>
         <image name="notasIconeSelecionado" width="32" height="32"/>
     </resources>
