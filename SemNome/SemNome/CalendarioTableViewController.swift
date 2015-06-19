@@ -48,6 +48,7 @@ class CalendarioTableViewController: UITableViewController {
                 let diaString = dateFormatter.stringFromDate(atividade.dia)
                 var arrayAtividades = diasEAtividades[diaString]
                 arrayAtividades!.append(atividade)
+                arrayAtividades!.sort() { $0.dia.compare( $1.dia ) == NSComparisonResult.OrderedAscending }
                 diasEAtividades[diaString] = arrayAtividades
             }
         }
