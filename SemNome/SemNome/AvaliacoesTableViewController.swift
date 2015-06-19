@@ -70,7 +70,7 @@ class AvaliacoesTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let nova = segue.destinationViewController as? NovaAvaliacaoTableViewController {
             nova.disciplina = disciplina
-        } else if let detalhe = segue.destinationViewController as? AvaliacaoViewController {
+        } else if let detalhe = segue.destinationViewController as? DetailTableViewController {
             detalhe.atividade = atividades[tableView.indexPathForSelectedRow()!.row] as Atividade
         }
     }

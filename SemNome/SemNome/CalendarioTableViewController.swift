@@ -91,7 +91,7 @@ class CalendarioTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let detalhe = segue.destinationViewController as? AvaliacaoViewController {
+        if let detalhe = segue.destinationViewController as? DetailTableViewController {
             let indiceDia = tableView.indexPathForSelectedRow()!.section
             let indiceAtividade = tableView.indexPathForSelectedRow()!.row
             let atividade = diasEAtividades[dias[indiceDia]]![indiceAtividade]

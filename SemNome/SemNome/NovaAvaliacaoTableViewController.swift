@@ -25,11 +25,6 @@ class NovaAvaliacaoTableViewController: UITableViewController, UIPickerViewDeleg
         pickerView.dataSource = self
         nomeAvaliacao.delegate = self
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        self.navigationItem.title = disciplina?.nome
-        tableView.reloadData()
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
