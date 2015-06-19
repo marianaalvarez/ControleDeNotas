@@ -65,7 +65,7 @@ class NovaAvaliacaoTableViewController: UITableViewController, UIPickerViewDeleg
         } else {
             var atividade = AtividadeManager.sharedInstance.novaAtividade()
             atividade.nome = nomeAvaliacao.text
-            atividade.data = datePicker.date
+            atividade.dia = datePicker.date
             if tipoSelecionado.text == "Trabalho" {
                 atividade.tipo = 0
             } else {

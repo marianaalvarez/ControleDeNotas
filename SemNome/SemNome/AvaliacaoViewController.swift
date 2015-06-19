@@ -11,6 +11,7 @@ import UIKit
 class AvaliacaoViewController: UIViewController {
 
     var atividade : Atividade?
+    @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,8 @@ class AvaliacaoViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         navigationItem.title = atividade?.nome
+        
+        label.text = "Nome: \(atividade!.nome)\nData: \(atividade!.dia)\nNota: \(atividade!.nota)\nTipo: \(atividade!.tipo)\nDisciplina: \(atividade!.disciplina.nome)"
     }
 
     override func didReceiveMemoryWarning() {

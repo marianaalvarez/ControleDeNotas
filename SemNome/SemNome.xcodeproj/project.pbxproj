@@ -17,14 +17,15 @@
 		05DA20061B223A6A0000424E /* AvaliacoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA20051B223A6A0000424E /* AvaliacoesTableViewController.swift */; };
 		05DA20081B2F30250000424E /* NovaDisciplinaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA20071B2F30250000424E /* NovaDisciplinaTableViewController.swift */; };
 		05DA200A1B2F362A0000424E /* NovaAvaliacaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA20091B2F362A0000424E /* NovaAvaliacaoTableViewController.swift */; };
-		176BBC021B333A620097B179 /* Atividade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BBC011B333A620097B179 /* Atividade.swift */; };
-		176BBC041B333A620097B179 /* Disciplina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BBC031B333A620097B179 /* Disciplina.swift */; };
+		1753B0351B33B20D004EB42A /* Disciplina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753B0341B33B20D004EB42A /* Disciplina.swift */; };
+		1753B0371B33B20E004EB42A /* Atividade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753B0361B33B20E004EB42A /* Atividade.swift */; };
 		176BBC061B333AA90097B179 /* AtividadeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BBC051B333AA90097B179 /* AtividadeManager.swift */; };
 		176BBC081B333AB60097B179 /* DisciplinaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BBC071B333AB60097B179 /* DisciplinaManager.swift */; };
 		179A13591B335FF10097F577 /* AvaliacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A13581B335FF10097F577 /* AvaliacaoViewController.swift */; };
 		179A135C1B33648B0097F577 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179A135B1B33648B0097F577 /* CloudKit.framework */; };
 		179A135F1B3365610097F577 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A135E1B3365610097F577 /* CloudKitManager.swift */; };
 		179A13611B33658F0097F577 /* DisciplinaCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A13601B33658F0097F577 /* DisciplinaCloud.swift */; };
+		179A13651B33A8680097F577 /* CalendarioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A13641B33A8680097F577 /* CalendarioTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +53,8 @@
 		05DA20051B223A6A0000424E /* AvaliacoesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacoesTableViewController.swift; sourceTree = "<group>"; };
 		05DA20071B2F30250000424E /* NovaDisciplinaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovaDisciplinaTableViewController.swift; sourceTree = "<group>"; };
 		05DA20091B2F362A0000424E /* NovaAvaliacaoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovaAvaliacaoTableViewController.swift; sourceTree = "<group>"; };
-		176BBC011B333A620097B179 /* Atividade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atividade.swift; sourceTree = "<group>"; };
-		176BBC031B333A620097B179 /* Disciplina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disciplina.swift; sourceTree = "<group>"; };
+		1753B0341B33B20D004EB42A /* Disciplina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disciplina.swift; sourceTree = "<group>"; };
+		1753B0361B33B20E004EB42A /* Atividade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atividade.swift; sourceTree = "<group>"; };
 		176BBC051B333AA90097B179 /* AtividadeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtividadeManager.swift; sourceTree = "<group>"; };
 		176BBC071B333AB60097B179 /* DisciplinaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinaManager.swift; sourceTree = "<group>"; };
 		179A13581B335FF10097F577 /* AvaliacaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacaoViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		179A135B1B33648B0097F577 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		179A135E1B3365610097F577 /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		179A13601B33658F0097F577 /* DisciplinaCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinaCloud.swift; sourceTree = "<group>"; };
+		179A13641B33A8680097F577 /* CalendarioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarioTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				05DA20051B223A6A0000424E /* AvaliacoesTableViewController.swift */,
 				05DA20091B2F362A0000424E /* NovaAvaliacaoTableViewController.swift */,
 				179A13581B335FF10097F577 /* AvaliacaoViewController.swift */,
+				179A13641B33A8680097F577 /* CalendarioTableViewController.swift */,
 				05D46C681B222B25007F1031 /* Main.storyboard */,
 				05D46C5F1B222B25007F1031 /* Supporting Files */,
 			);
@@ -150,8 +153,8 @@
 		176BBC001B333A3D0097B179 /* Entidades */ = {
 			isa = PBXGroup;
 			children = (
-				176BBC031B333A620097B179 /* Disciplina.swift */,
-				176BBC011B333A620097B179 /* Atividade.swift */,
+				1753B0361B33B20E004EB42A /* Atividade.swift */,
+				1753B0341B33B20D004EB42A /* Disciplina.swift */,
 				176BBC051B333AA90097B179 /* AtividadeManager.swift */,
 				176BBC071B333AB60097B179 /* DisciplinaManager.swift */,
 			);
@@ -276,16 +279,17 @@
 				05DA200A1B2F362A0000424E /* NovaAvaliacaoTableViewController.swift in Sources */,
 				176BBC061B333AA90097B179 /* AtividadeManager.swift in Sources */,
 				179A135F1B3365610097F577 /* CloudKitManager.swift in Sources */,
-				176BBC041B333A620097B179 /* Disciplina.swift in Sources */,
 				05DA20041B2236D00000424E /* DisciplinasTableViewController.swift in Sources */,
 				05DA20061B223A6A0000424E /* AvaliacoesTableViewController.swift in Sources */,
 				05DA20081B2F30250000424E /* NovaDisciplinaTableViewController.swift in Sources */,
-				176BBC021B333A620097B179 /* Atividade.swift in Sources */,
 				179A13611B33658F0097F577 /* DisciplinaCloud.swift in Sources */,
+				1753B0371B33B20E004EB42A /* Atividade.swift in Sources */,
 				179A13591B335FF10097F577 /* AvaliacaoViewController.swift in Sources */,
 				05D46C651B222B25007F1031 /* SemNome.xcdatamodeld in Sources */,
 				176BBC081B333AB60097B179 /* DisciplinaManager.swift in Sources */,
 				05D46C621B222B25007F1031 /* AppDelegate.swift in Sources */,
+				179A13651B33A8680097F577 /* CalendarioTableViewController.swift in Sources */,
+				1753B0351B33B20D004EB42A /* Disciplina.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

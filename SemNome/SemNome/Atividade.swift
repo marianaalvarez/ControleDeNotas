@@ -12,7 +12,7 @@ import CoreData
 @objc(Atividade)
 class Atividade: NSManagedObject {
 
-    @NSManaged var data: NSDate
+    @NSManaged var dia: NSDate
     @NSManaged var nome: String
     @NSManaged var nota: NSNumber
     @NSManaged var tipo: NSNumber

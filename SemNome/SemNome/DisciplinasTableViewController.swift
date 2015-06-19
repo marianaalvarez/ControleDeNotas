@@ -13,10 +13,12 @@ class DisciplinasTableViewController: UITableViewController, UITableViewDataSour
 
     lazy var disciplinas = {
         return DisciplinaManager.sharedInstance.buscarDisciplinas()
-        }()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tabBarController?.tabBar.tintColor = UIColor.redColor()
     }
     
     override func viewWillAppear(animated: Bool) {

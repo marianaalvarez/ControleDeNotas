@@ -19,8 +19,10 @@ class AvaliacoesTableViewController: UITableViewController {
 
     override func viewWillAppear(animated: Bool) {
         self.navigationItem.title = disciplina?.nome
+        
         atividades = disciplina?.atividades.allObjects as! [Atividade]
-        atividades.sort() { $0.data.compare($1.data) == NSComparisonResult.OrderedAscending }
+        atividades.sort() { $0.dia.compare($1.dia) == NSComparisonResult.OrderedAscending }
+        
         tableView.reloadData()
     }
     
@@ -48,7 +50,7 @@ class AvaliacoesTableViewController: UITableViewController {
         cell.textLabel?.text = item.nome
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
-        let diaAtividade = dateFormatter.stringFromDate(item.data)
+        let diaAtividade = dateFormatter.stringFromDate(item.dia)
         cell.detailTextLabel?.text = diaAtividade
         
         return cell

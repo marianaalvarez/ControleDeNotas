@@ -15,10 +15,9 @@ class Disciplina: NSManagedObject {
     @NSManaged var nome: String
     @NSManaged var semestre: NSNumber
     @NSManaged var atividades: NSSet
-    
+
     func addAtividade(atividade : Atividade) {
         var atividades = self.mutableSetValueForKey("atividades")
         atividades.addObject(atividade)
     }
-
 }
