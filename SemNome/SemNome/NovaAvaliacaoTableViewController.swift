@@ -68,6 +68,18 @@ class NovaAvaliacaoTableViewController: UITableViewController, UIPickerViewDeleg
             }
             atividade.disciplina = disciplina!
             AtividadeManager.sharedInstance.salvar()
+            
+            var dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+            var dataEntrega = dateFormatter.stringFromDate(datePicker.date)
+
+            var notification = UILocalNotification()
+            notification.alertBody = "Atividade \(atividade.nome) da disciplina \(atividade.disciplina.nome) pendente para dia \(dataEntrega)"
+            notification.fireDate = datePicker.date
+            notification.soundName = UILocalNotificationDefaultSoundName
+            //notification.repeatInterval = NSCalendarUnit.CalendarUnitDay
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            
             self.navigationController?.popViewControllerAnimated(true)
         }
     }
