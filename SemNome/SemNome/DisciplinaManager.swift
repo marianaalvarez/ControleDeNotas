@@ -35,6 +35,8 @@ public class DisciplinaManager {
     
     func buscarDisciplinas() -> [Disciplina] {
         let fetchRequest = NSFetchRequest(entityName: DisciplinaManager.entityName)
+        let sortDescriptor = NSSortDescriptor(key: "semestre", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
         var error:NSError?
         
         let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
@@ -48,5 +50,10 @@ public class DisciplinaManager {
         NSFetchRequest(entityName: "FetchRequest")
         
         return [Disciplina]()
+    }
+    
+    func deletar(disciplina: Disciplina) {
+        managedContext.deleteObject(disciplina)
+        salvar()
     }
 }

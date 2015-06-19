@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NovaAvaliacaoTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class NovaAvaliacaoTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
     @IBOutlet weak var nomeAvaliacao: UITextField!
     @IBOutlet weak var dataSelecionada: UILabel!
@@ -23,6 +23,7 @@ class NovaAvaliacaoTableViewController: UITableViewController, UIPickerViewDeleg
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
+        nomeAvaliacao.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -33,6 +34,11 @@ class NovaAvaliacaoTableViewController: UITableViewController, UIPickerViewDeleg
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        nomeAvaliacao.resignFirstResponder()
+        return true
+    }
 
     @IBAction func datePickerAction(sender: AnyObject) {
         var dateFormatter = NSDateFormatter()
@@ -42,17 +48,33 @@ class NovaAvaliacaoTableViewController: UITableViewController, UIPickerViewDeleg
     }
     
     @IBAction func salvarAvaliacao(sender: AnyObject) {
-        var atividade = AtividadeManager.sharedInstance.novaAtividade()
-        atividade.nome = nomeAvaliacao.text
-        atividade.data = datePicker.date
-        if tipoSelecionado.text == "Trabalho" {
-            atividade.tipo = 0
+        if nomeAvaliacao.text.isEmpty {
+            var alert = UIAlertController(title: "Nome em Branco",
+                message: "É necessário fornecer um nome para a atividade.",
+                preferredStyle: .Alert)
+            
+            let cancelAction = UIAlertAction(title: "Ok",
+                style: .Default) { (action: UIAlertAction!) -> Void in
+            }
+            
+            alert.addAction(cancelAction)
+            
+            presentViewController(alert,
+                animated: true,
+                completion: nil)
         } else {
-            atividade.tipo = 1
+            var atividade = AtividadeManager.sharedInstance.novaAtividade()
+            atividade.nome = nomeAvaliacao.text
+            atividade.data = datePicker.date
+            if tipoSelecionado.text == "Trabalho" {
+                atividade.tipo = 0
+            } else {
+                atividade.tipo = 1
+            }
+            atividade.disciplina = disciplina!
+            AtividadeManager.sharedInstance.salvar()
+            self.navigationController?.popViewControllerAnimated(true)
         }
-        atividade.disciplina = disciplina!
-        AtividadeManager.sharedInstance.salvar()
-        self.navigationController?.popViewControllerAnimated(true)
     }
     
     // PickerView DataSource

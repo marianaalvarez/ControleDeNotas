@@ -35,6 +35,8 @@ public class AtividadeManager {
     
     func buscarAtividades() -> [Atividade] {
         let fetchRequest = NSFetchRequest(entityName: AtividadeManager.entityName)
+        let sortDescriptor = NSSortDescriptor(key: "data", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
         var error:NSError?
         
         let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
@@ -48,5 +50,10 @@ public class AtividadeManager {
         NSFetchRequest(entityName: "FetchRequest")
         
         return [Atividade]()
+    }
+    
+    func deletar(atividade: Atividade) {
+        managedContext.deleteObject(atividade)
+        salvar()
     }
 }

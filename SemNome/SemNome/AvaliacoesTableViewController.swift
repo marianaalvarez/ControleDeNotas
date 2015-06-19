@@ -11,6 +11,7 @@ import UIKit
 class AvaliacoesTableViewController: UITableViewController {
 
     var disciplina: Disciplina?
+    var atividades = [Atividade]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,8 @@ class AvaliacoesTableViewController: UITableViewController {
 
     override func viewWillAppear(animated: Bool) {
         self.navigationItem.title = disciplina?.nome
+        atividades = disciplina?.atividades.allObjects as! [Atividade]
+        atividades.sort() { $0.data.compare($1.data) == NSComparisonResult.OrderedAscending }
         tableView.reloadData()
     }
     
@@ -33,29 +36,40 @@ class AvaliacoesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = disciplina?.atividades.count {
-            return disciplina!.atividades.allObjects.count
+            return atividades.count
         }
         return 0
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let item = disciplina!.atividades.allObjects[indexPath.row] as! Atividade
+        let item = atividades[indexPath.row] as Atividade
         var cell = tableView.dequeueReusableCellWithIdentifier("celulaAvaliacao") as! UITableViewCell
         
         cell.textLabel?.text = item.nome
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         let diaAtividade = dateFormatter.stringFromDate(item.data)
         cell.detailTextLabel?.text = diaAtividade
         
         return cell
     }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let atividade = atividades[indexPath.row] as Atividade
+            AtividadeManager.sharedInstance.deletar(atividade)
+            atividades.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+    }
 
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let destino = segue.destinationViewController as? NovaAvaliacaoTableViewController {
-            destino.disciplina = disciplina
+        if let nova = segue.destinationViewController as? NovaAvaliacaoTableViewController {
+            nova.disciplina = disciplina
+        } else if let detalhe = segue.destinationViewController as? AvaliacaoViewController {
+            detalhe.atividade = atividades[tableView.indexPathForSelectedRow()!.row] as Atividade
         }
     }
 

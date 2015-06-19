@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DisciplinasTableViewController: UITableViewController, UITableViewDataSource {
 
@@ -46,6 +47,15 @@ class DisciplinasTableViewController: UITableViewController, UITableViewDataSour
         cell.detailTextLabel?.text = "Semestre: \(item.semestre)"
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let disciplina = disciplinas[indexPath.row] as Disciplina
+            DisciplinaManager.sharedInstance.deletar(disciplina)
+            disciplinas.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
     }
 
     // MARK: - Navigation

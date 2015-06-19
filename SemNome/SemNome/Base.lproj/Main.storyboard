@@ -221,6 +221,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="AcI-Gr-waL" kind="show" id="tDb-xq-ufD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -302,7 +305,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="CfZ-Px-68P">
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="CfZ-Px-68P">
                                                     <rect key="frame" x="8" y="67" width="584" height="162"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="162" id="6RP-dz-KIw"/>
@@ -393,7 +396,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1g-mA-IBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2265" y="533"/>
+            <point key="canvasLocation" x="2306" y="-171"/>
+        </scene>
+        <!--Avaliacao View Controller-->
+        <scene sceneID="RSg-2R-uEU">
+            <objects>
+                <viewController id="AcI-Gr-waL" customClass="AvaliacaoViewController" customModule="SemNome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2SX-RO-OD7"/>
+                        <viewControllerLayoutGuide type="bottom" id="dgP-FP-Lmn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C5X-C1-agC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vOh-II-RhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2306" y="533"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v4c-5e-skg">

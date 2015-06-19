@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		05D46C621B222B25007F1031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D46C611B222B25007F1031 /* AppDelegate.swift */; };
 		05D46C651B222B25007F1031 /* SemNome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05D46C631B222B25007F1031 /* SemNome.xcdatamodeld */; };
-		05D46C671B222B25007F1031 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D46C661B222B25007F1031 /* ViewController.swift */; };
 		05D46C6A1B222B25007F1031 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D46C681B222B25007F1031 /* Main.storyboard */; };
 		05D46C6C1B222B25007F1031 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05D46C6B1B222B25007F1031 /* Images.xcassets */; };
 		05D46C6F1B222B25007F1031 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D46C6D1B222B25007F1031 /* LaunchScreen.xib */; };
@@ -22,6 +21,10 @@
 		176BBC041B333A620097B179 /* Disciplina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BBC031B333A620097B179 /* Disciplina.swift */; };
 		176BBC061B333AA90097B179 /* AtividadeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BBC051B333AA90097B179 /* AtividadeManager.swift */; };
 		176BBC081B333AB60097B179 /* DisciplinaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BBC071B333AB60097B179 /* DisciplinaManager.swift */; };
+		179A13591B335FF10097F577 /* AvaliacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A13581B335FF10097F577 /* AvaliacaoViewController.swift */; };
+		179A135C1B33648B0097F577 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179A135B1B33648B0097F577 /* CloudKit.framework */; };
+		179A135F1B3365610097F577 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A135E1B3365610097F577 /* CloudKitManager.swift */; };
+		179A13611B33658F0097F577 /* DisciplinaCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A13601B33658F0097F577 /* DisciplinaCloud.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,6 @@
 		05D46C601B222B25007F1031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05D46C611B222B25007F1031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05D46C641B222B25007F1031 /* SemNome.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SemNome.xcdatamodel; sourceTree = "<group>"; };
-		05D46C661B222B25007F1031 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		05D46C691B222B25007F1031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05D46C6B1B222B25007F1031 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		05D46C6E1B222B25007F1031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -54,6 +56,11 @@
 		176BBC031B333A620097B179 /* Disciplina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disciplina.swift; sourceTree = "<group>"; };
 		176BBC051B333AA90097B179 /* AtividadeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtividadeManager.swift; sourceTree = "<group>"; };
 		176BBC071B333AB60097B179 /* DisciplinaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinaManager.swift; sourceTree = "<group>"; };
+		179A13581B335FF10097F577 /* AvaliacaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacaoViewController.swift; sourceTree = "<group>"; };
+		179A135A1B33647A0097F577 /* SemNome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SemNome.entitlements; sourceTree = "<group>"; };
+		179A135B1B33648B0097F577 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		179A135E1B3365610097F577 /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		179A13601B33658F0097F577 /* DisciplinaCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinaCloud.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				179A135C1B33648B0097F577 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +85,7 @@
 		05D46C531B222B24007F1031 = {
 			isa = PBXGroup;
 			children = (
+				179A135B1B33648B0097F577 /* CloudKit.framework */,
 				05D46C5E1B222B25007F1031 /* SemNome */,
 				05D46C771B222B25007F1031 /* SemNomeTests */,
 				05D46C5D1B222B25007F1031 /* Products */,
@@ -95,17 +104,15 @@
 		05D46C5E1B222B25007F1031 /* SemNome */ = {
 			isa = PBXGroup;
 			children = (
+				179A135D1B3365340097F577 /* Cloud */,
 				176BBC001B333A3D0097B179 /* Entidades */,
 				05D46C611B222B25007F1031 /* AppDelegate.swift */,
 				05DA20031B2236D00000424E /* DisciplinasTableViewController.swift */,
 				05DA20071B2F30250000424E /* NovaDisciplinaTableViewController.swift */,
 				05DA20051B223A6A0000424E /* AvaliacoesTableViewController.swift */,
 				05DA20091B2F362A0000424E /* NovaAvaliacaoTableViewController.swift */,
-				05D46C661B222B25007F1031 /* ViewController.swift */,
+				179A13581B335FF10097F577 /* AvaliacaoViewController.swift */,
 				05D46C681B222B25007F1031 /* Main.storyboard */,
-				05D46C6B1B222B25007F1031 /* Images.xcassets */,
-				05D46C6D1B222B25007F1031 /* LaunchScreen.xib */,
-				05D46C631B222B25007F1031 /* SemNome.xcdatamodeld */,
 				05D46C5F1B222B25007F1031 /* Supporting Files */,
 			);
 			path = SemNome;
@@ -114,6 +121,10 @@
 		05D46C5F1B222B25007F1031 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				179A135A1B33647A0097F577 /* SemNome.entitlements */,
+				05D46C6B1B222B25007F1031 /* Images.xcassets */,
+				05D46C6D1B222B25007F1031 /* LaunchScreen.xib */,
+				05D46C631B222B25007F1031 /* SemNome.xcdatamodeld */,
 				05D46C601B222B25007F1031 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -145,6 +156,15 @@
 				176BBC071B333AB60097B179 /* DisciplinaManager.swift */,
 			);
 			name = Entidades;
+			sourceTree = "<group>";
+		};
+		179A135D1B3365340097F577 /* Cloud */ = {
+			isa = PBXGroup;
+			children = (
+				179A135E1B3365610097F577 /* CloudKitManager.swift */,
+				179A13601B33658F0097F577 /* DisciplinaCloud.swift */,
+			);
+			name = Cloud;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +216,12 @@
 				TargetAttributes = {
 					05D46C5B1B222B24007F1031 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = LNGFCK45YW;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					05D46C731B222B25007F1031 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -249,12 +275,14 @@
 			files = (
 				05DA200A1B2F362A0000424E /* NovaAvaliacaoTableViewController.swift in Sources */,
 				176BBC061B333AA90097B179 /* AtividadeManager.swift in Sources */,
-				05D46C671B222B25007F1031 /* ViewController.swift in Sources */,
+				179A135F1B3365610097F577 /* CloudKitManager.swift in Sources */,
 				176BBC041B333A620097B179 /* Disciplina.swift in Sources */,
 				05DA20041B2236D00000424E /* DisciplinasTableViewController.swift in Sources */,
 				05DA20061B223A6A0000424E /* AvaliacoesTableViewController.swift in Sources */,
 				05DA20081B2F30250000424E /* NovaDisciplinaTableViewController.swift in Sources */,
 				176BBC021B333A620097B179 /* Atividade.swift in Sources */,
+				179A13611B33658F0097F577 /* DisciplinaCloud.swift in Sources */,
+				179A13591B335FF10097F577 /* AvaliacaoViewController.swift in Sources */,
 				05D46C651B222B25007F1031 /* SemNome.xcdatamodeld in Sources */,
 				176BBC081B333AB60097B179 /* DisciplinaManager.swift in Sources */,
 				05D46C621B222B25007F1031 /* AppDelegate.swift in Sources */,
@@ -386,9 +414,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SemNome/SemNome.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SemNome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -396,9 +428,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SemNome/SemNome.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SemNome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

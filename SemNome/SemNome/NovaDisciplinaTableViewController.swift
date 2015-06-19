@@ -8,25 +8,50 @@
 
 import UIKit
 
-class NovaDisciplinaTableViewController: UITableViewController {
+class NovaDisciplinaTableViewController: UITableViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nomeDisciplina: UITextField!
     @IBOutlet weak var semestreDisciplina: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nomeDisciplina.delegate = self
+        semestreDisciplina.delegate = self
+        semestreDisciplina.keyboardType = .NumberPad
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        nomeDisciplina.resignFirstResponder()
+        semestreDisciplina.resignFirstResponder()
+        return true
+    }
 
     @IBAction func salvaDisciplina(sender: AnyObject) {
-        var disciplina = DisciplinaManager.sharedInstance.novaDisciplina()
-        disciplina.nome = nomeDisciplina.text
-        disciplina.semestre = NSNumber(integer: semestreDisciplina.text.toInt()!)
-        DisciplinaManager.sharedInstance.salvar()
-        self.navigationController?.popViewControllerAnimated(true)
+        if nomeDisciplina.text.isEmpty {
+            var alert = UIAlertController(title: "Nome em Branco",
+                message: "É necessário fornecer um nome para a disciplina.",
+                preferredStyle: .Alert)
+            
+            let cancelAction = UIAlertAction(title: "Ok",
+                style: .Default) { (action: UIAlertAction!) -> Void in
+            }
+            
+            alert.addAction(cancelAction)
+            
+            presentViewController(alert,
+                animated: true,
+                completion: nil)
+        } else {
+            var disciplina = DisciplinaManager.sharedInstance.novaDisciplina()
+            disciplina.nome = nomeDisciplina.text
+            disciplina.semestre = NSNumber(integer: semestreDisciplina.text.toInt()!)
+            DisciplinaManager.sharedInstance.salvar()
+            self.navigationController?.popViewControllerAnimated(true)
+        }
     }
 
 }
