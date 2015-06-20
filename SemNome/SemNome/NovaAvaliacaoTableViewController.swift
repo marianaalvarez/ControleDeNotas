@@ -16,6 +16,7 @@ class NovaAvaliacaoTableViewController: UITableViewController, UIPickerViewDeleg
     @IBOutlet weak var tipoSelecionado: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
     var disciplina: Disciplina?
+    var nomeExistente: Bool = false
     
     let tiposDeAvaliacoes = ["Prova","Trabalho"]
     
@@ -43,6 +44,7 @@ class NovaAvaliacaoTableViewController: UITableViewController, UIPickerViewDeleg
     }
     
     @IBAction func salvarAvaliacao(sender: AnyObject) {
+        nomeExistente = false
         if nomeAvaliacao.text.isEmpty {
             var alert = UIAlertController(title: "Nome em Branco",
                 message: "É necessário fornecer um nome para a atividade.",
@@ -58,20 +60,31 @@ class NovaAvaliacaoTableViewController: UITableViewController, UIPickerViewDeleg
                 animated: true,
                 completion: nil)
         } else {
-            var atividade = AtividadeManager.sharedInstance.novaAtividade()
-            atividade.nome = nomeAvaliacao.text
-            atividade.dia = datePicker.date
-            if tipoSelecionado.text == "Trabalho" {
-                atividade.tipo = 0
-            } else {
-                atividade.tipo = 1
+            var atividades = disciplina?.atividades.allObjects as! [Atividade]
+            for atividade in atividades {
+                if atividade.nome == nomeAvaliacao.text {
+                    var alert = UIAlertController(title: "Atenção", message: "Nome da atividade já existe para essa disciplina!", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                    nomeExistente = true
+                }
             }
-            atividade.disciplina = disciplina!
-            AtividadeManager.sharedInstance.salvar()
+            if (!nomeExistente) {
+                var atividade = AtividadeManager.sharedInstance.novaAtividade()
+                atividade.nome = nomeAvaliacao.text
+                atividade.dia = datePicker.date
+                if tipoSelecionado.text == "Trabalho" {
+                    atividade.tipo = 0
+                } else {
+                    atividade.tipo = 1
+                }
+                atividade.disciplina = disciplina!
+                AtividadeManager.sharedInstance.salvar()
             
-            self.criaNotificacao(atividade)
+                self.criaNotificacao(atividade)
             
-            self.navigationController?.popViewControllerAnimated(true)
+                self.navigationController?.popViewControllerAnimated(true)
+            }
         }
     }
     
