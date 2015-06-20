@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05AB0ACF1B35D8B3008B6962 /* EditaAvaliacaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB0ACE1B35D8B3008B6962 /* EditaAvaliacaoTableViewController.swift */; };
 		05D46C621B222B25007F1031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D46C611B222B25007F1031 /* AppDelegate.swift */; };
 		05D46C651B222B25007F1031 /* SemNome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05D46C631B222B25007F1031 /* SemNome.xcdatamodeld */; };
 		05D46C6A1B222B25007F1031 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D46C681B222B25007F1031 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05AB0ACE1B35D8B3008B6962 /* EditaAvaliacaoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditaAvaliacaoTableViewController.swift; sourceTree = "<group>"; };
 		05D46C5C1B222B25007F1031 /* SemNome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SemNome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05D46C601B222B25007F1031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05D46C611B222B25007F1031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				05DA20051B223A6A0000424E /* AvaliacoesTableViewController.swift */,
 				05DA20091B2F362A0000424E /* NovaAvaliacaoTableViewController.swift */,
 				1753B03A1B33DD7F004EB42A /* DetailTableViewController.swift */,
+				05AB0ACE1B35D8B3008B6962 /* EditaAvaliacaoTableViewController.swift */,
 				179A13641B33A8680097F577 /* CalendarioTableViewController.swift */,
 				05D46C681B222B25007F1031 /* Main.storyboard */,
 				05D46C5F1B222B25007F1031 /* Supporting Files */,
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05DA200A1B2F362A0000424E /* NovaAvaliacaoTableViewController.swift in Sources */,
+				05AB0ACF1B35D8B3008B6962 /* EditaAvaliacaoTableViewController.swift in Sources */,
 				176BBC061B333AA90097B179 /* AtividadeManager.swift in Sources */,
 				179A135F1B3365610097F577 /* CloudKitManager.swift in Sources */,
 				05DA20041B2236D00000424E /* DisciplinasTableViewController.swift in Sources */,

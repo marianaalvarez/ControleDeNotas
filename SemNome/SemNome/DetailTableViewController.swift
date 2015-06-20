@@ -59,6 +59,11 @@ class DetailTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let editar = segue.destinationViewController as! EditaAvaliacaoTableViewController
+        editar.atividade = atividade
+    }
 
     /*
     // MARK: - Navigation
