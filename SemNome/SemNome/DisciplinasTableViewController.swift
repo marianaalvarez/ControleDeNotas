@@ -24,6 +24,7 @@ class DisciplinasTableViewController: UITableViewController, UITableViewDataSour
     override func viewWillAppear(animated: Bool) {
         disciplinas = DisciplinaManager.sharedInstance.buscarDisciplinas()
         self.tableView.reloadData()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,6 +58,12 @@ class DisciplinasTableViewController: UITableViewController, UITableViewDataSour
             DisciplinaManager.sharedInstance.deletar(disciplina)
             disciplinas.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            for notification in UIApplication.sharedApplication().scheduledLocalNotifications as! [UILocalNotification] {
+                if (notification.userInfo!["disciplina"] as! String == disciplina.nome) {
+                    UIApplication.sharedApplication().cancelLocalNotification(notification)
+                }
+            }
         }
     }
 

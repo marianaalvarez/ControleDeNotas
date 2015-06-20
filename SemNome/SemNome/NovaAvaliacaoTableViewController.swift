@@ -93,9 +93,11 @@ class NovaAvaliacaoTableViewController: UITableViewController, UIPickerViewDeleg
             } else {
                 notification.alertBody = "Faltam \(i) dias para a entrega da atividade \(atividade.nome) da disciplina \(atividade.disciplina.nome)."
             }
-            
+            notification.alertAction = "open"
             notification.fireDate = novaData
             notification.soundName = UILocalNotificationDefaultSoundName
+            notification.userInfo = ["disciplina": atividade.disciplina.nome, "atividade": atividade.nome]
+            notification.category = "ANOTAI_CATEGORY"
             UIApplication.sharedApplication().scheduleLocalNotification(notification)
             
         }
