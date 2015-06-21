@@ -706,7 +706,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Editar Atividade" id="jSi-g1-3Ds">
-                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="u6j-7o-3N3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="u6j-7o-3N3">
+                            <connections>
+                                <action selector="salvaAvaliacao:" destination="ykh-BI-xaK" id="jVV-Rc-Oaq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dataEntrega" destination="zme-kF-Hg5" id="i3o-Py-MED"/>

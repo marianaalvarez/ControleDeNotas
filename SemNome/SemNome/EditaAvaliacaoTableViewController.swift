@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 class EditaAvaliacaoTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
@@ -47,6 +49,22 @@ class EditaAvaliacaoTableViewController: UITableViewController, UIPickerViewDele
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func salvaAvaliacao(sender: AnyObject) {
+        
+        if (atividade!.nome != nomeAvaliacao.text || atividade!.dia != datePicker.date || atividade!.nota != notaAvaliacao.text || atividade?.tipo != pickerView.selectedRowInComponent(0)) {
+            
+            let novaAtividade : NSManagedObject = atividade! as NSManagedObject
+            novaAtividade.setValue(nomeAvaliacao.text, forKey: "nome")
+            novaAtividade.setValue(datePicker.date, forKey: "dia")
+            novaAtividade.setValue(pickerView.selectedRowInComponent(0), forKey: "tipo")
+            var nota = NSNumber(double: (notaAvaliacao.text as NSString).doubleValue)
+            novaAtividade.setValue(nota, forKey: "nota")
+            AtividadeManager.sharedInstance.atualizaAtividade(novaAtividade)
+        }
+        
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     @IBAction func datePickerAction(sender: AnyObject) {
