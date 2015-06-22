@@ -51,10 +51,6 @@ public class AtividadeManager {
     }
     
     func atualizaAtividade(atividade: NSManagedObject){
-//        
-//        let novaAtividade : NSManagedObject = atividade as NSManagedObject
-//        novaAtividade.setValue("mudou", forKey: "nome")
-        
         var error:NSError?
         
         if ((atividade.managedObjectContext?.save(&error)) != nil) {
@@ -62,44 +58,6 @@ public class AtividadeManager {
             println("\(error)")
         }
     }
-        
-//        let fetchRequest = NSFetchRequest(entityName: AtividadeManager.entityName)
-//        var error:NSError?
-//        
-//        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
-//        
-//        if let results = fetchedResults as? [Atividade] {
-//            return results
-//        } else {
-//            println("Could not fetch. Error: \(error), \(error!.userInfo)")
-//        }
-//        
-//        NSFetchRequest(entityName: "FetchRequest")
-//        
-//        return Atividade()
-    
-//    func atualizaAtividade(atividade: Atividade) -> Atividade {
-//    
-//        let fetchRequest : NSFetchRequest = NSFetchRequest(entityName: "Atividade")
-//        var error : NSError? = nil
-//        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
-//        if error != nil {
-//            println("An error occurred loading the data")
-//        } else {
-//            let result = results[indexPath.row]
-//            result.count = result.count.integerValue + 1
-//            var saveError : NSError? = nil
-//            if !managedObjectContext!.save(&saveError) {
-//                println("Could not update record")
-//            } else {
-//                names[indexPath.row] = result
-//                tableView.reloadData()
-//            }
-//        }
-//        
-//        return
-//    }
-
     
     func deletar(atividade: Atividade) {
         managedContext.deleteObject(atividade)
