@@ -759,6 +759,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XTB-H7-xI8" id="dgj-uI-Ndh">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="yVX-Og-Sav" kind="show" id="cnb-EM-QIe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -910,6 +913,6 @@
         <image name="notasIconeSelecionado" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="W2l-pJ-Q41"/>
+        <segue reference="cnb-EM-QIe"/>
     </inferredMetricsTieBreakers>
 </document>
