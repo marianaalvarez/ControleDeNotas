@@ -53,15 +53,20 @@ class EditaAvaliacaoTableViewController: UITableViewController, UIPickerViewDele
     
     @IBAction func salvaAvaliacao(sender: AnyObject) {
         
-        if (atividade!.nome != nomeAvaliacao.text || atividade!.dia != datePicker.date || atividade!.nota != notaAvaliacao.text || atividade?.tipo != pickerView.selectedRowInComponent(0)) {
-            
+        var nota = NSNumber(double: (notaAvaliacao.text as NSString).doubleValue).doubleValue
+        
+        if (atividade!.nome != nomeAvaliacao.text || atividade!.dia != datePicker.date ||
+            atividade!.nota != nota || atividade?.tipo != pickerView.selectedRowInComponent(0)) {
+            println("\(nota)")
+            println("\(atividade!.nota)")
             let novaAtividade : NSManagedObject = atividade! as NSManagedObject
             novaAtividade.setValue(nomeAvaliacao.text, forKey: "nome")
             novaAtividade.setValue(datePicker.date, forKey: "dia")
             novaAtividade.setValue(pickerView.selectedRowInComponent(0), forKey: "tipo")
-            var nota = NSNumber(double: (notaAvaliacao.text as NSString).doubleValue)
             novaAtividade.setValue(nota, forKey: "nota")
             AtividadeManager.sharedInstance.atualizaAtividade(novaAtividade)
+            
+            println("passou")
         }
         
         self.navigationController?.popViewControllerAnimated(true)
