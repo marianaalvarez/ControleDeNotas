@@ -64,7 +64,7 @@ class EditaAvaliacaoTableViewController: UITableViewController, UIPickerViewDele
             novaAtividade.setValue(datePicker.date, forKey: "dia")
             novaAtividade.setValue(pickerView.selectedRowInComponent(0), forKey: "tipo")
             novaAtividade.setValue(nota, forKey: "nota")
-            AtividadeManager.sharedInstance.atualizaAtividade(novaAtividade)
+            AtividadeManager.sharedInstance.salvar()
             
             println("passou")
         }

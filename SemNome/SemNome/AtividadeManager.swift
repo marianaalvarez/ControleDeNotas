@@ -50,15 +50,6 @@ public class AtividadeManager {
         return [Atividade]()
     }
     
-    func atualizaAtividade(atividade: NSManagedObject){
-        var error:NSError?
-        
-        if ((atividade.managedObjectContext?.save(&error)) != nil) {
-            println("Unable to save managed object context.")
-            println("\(error)")
-        }
-    }
-    
     func deletar(atividade: Atividade) {
         managedContext.deleteObject(atividade)
         salvar()
