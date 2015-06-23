@@ -14,12 +14,11 @@ class DetailTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.title = atividade?.nome
     }
     
     override func viewWillAppear(animated: Bool) {
         tableView.reloadData()
+        navigationItem.title = atividade?.nome
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,19 +63,11 @@ class DetailTableViewController: UITableViewController {
         return cell
     }
     
+    // MARK: - Navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let editar = segue.destinationViewController as! EditaAvaliacaoTableViewController
+        let editar = segue.destinationViewController as! EditarViewController
         editar.atividade = atividade
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
