@@ -64,13 +64,15 @@ class DisciplinasTableViewController: UITableViewController, UITableViewDataSour
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let disciplina = disciplinas[indexPath.row] as Disciplina
-//            DisciplinaManager.sharedInstance.deletar(disciplina)
-//            disciplinas.removeAtIndex(indexPath.row)
-//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            DisciplinaManager.sharedInstance.deletar(disciplina)
+            disciplinas.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             
-            for notification in UIApplication.sharedApplication().scheduledLocalNotifications as! [UILocalNotification] {
-                if (notification.userInfo!["disciplina"] as! String == disciplina.nome) {
-                    UIApplication.sharedApplication().cancelLocalNotification(notification)
+            UIApplication.sharedApplication().cancelAllLocalNotifications()
+            
+            for disciplina in disciplinas {
+                for atividade in disciplina.atividades.allObjects as! [Atividade] {
+                    LocalNotificationManager.sharedInstance.criaNotificacao(atividade)
                 }
             }
         }

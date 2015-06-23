@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "boletimIcone.png"
+      "filename" : "Exam-32.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "boletimIcone@2x.png"
+      "filename" : "Exam-64.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "boletimIcone@3x.png"
+      "filename" : "Exam-100.png"
     }
   ],
   "info" : {

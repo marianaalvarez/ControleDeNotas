@@ -59,18 +59,15 @@ class AvaliacoesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let atividade = atividades[indexPath.row] as Atividade
-            for notification in UIApplication.sharedApplication().scheduledLocalNotifications as! [UILocalNotification] {
-                println(notification.userInfo!["atividade"]!)
-                if (
-                    //notification.userInfo!["disciplina"] as! String == atividade.disciplina.nome &&
-                    notification.userInfo!["atividade"] as! String == atividade.nome) {
-                    UIApplication.sharedApplication().cancelLocalNotification(notification)
-                }
-            }
+            AtividadeManager.sharedInstance.deletar(atividade)
+            atividades.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             
-//            AtividadeManager.sharedInstance.deletar(atividade)
-//            atividades.removeAtIndex(indexPath.row)
-//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            UIApplication.sharedApplication().cancelAllLocalNotifications()
+            
+            for atividade in atividades {
+                LocalNotificationManager.sharedInstance.criaNotificacao(atividade)
+            }
         }
     }
 
