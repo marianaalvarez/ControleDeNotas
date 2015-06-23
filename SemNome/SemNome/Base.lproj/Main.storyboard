@@ -373,6 +373,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l0-Vq-UCZ">
+                                <rect key="frame" x="26" y="309" width="34" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nota" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMu-06-oHz">
                                 <rect key="frame" x="26" y="162" width="37" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -390,36 +396,122 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a40-fk-57X">
-                                <rect key="frame" x="154" y="264" width="45" height="30"/>
-                                <state key="normal" title="Alterar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l0-Vq-UCZ">
-                                <rect key="frame" x="26" y="309" width="34" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TipoLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOK-0g-K6c">
                                 <rect key="frame" x="46" y="338" width="76" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a40-fk-57X">
+                                <rect key="frame" x="154" y="264" width="45" height="30"/>
+                                <state key="normal" title="Alterar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alterarData:" destination="ysB-Mm-vUl" eventType="touchUpInside" id="O2k-Ak-Peq"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVb-Il-MuF">
                                 <rect key="frame" x="152" y="333" width="45" height="30"/>
                                 <state key="normal" title="Alterar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="alterarTipo:" destination="ysB-Mm-vUl" eventType="touchUpInside" id="ogF-dc-AXA"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIj-EY-Zhi">
+                                <rect key="frame" x="0.0" y="353" width="600" height="198"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZj-Sy-HRk">
+                                        <rect key="frame" x="-16" y="36" width="632" height="162"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="162" id="o6O-zf-bd2"/>
+                                        </constraints>
+                                    </view>
+                                    <datePicker opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="ayN-7d-dhA">
+                                        <rect key="frame" x="0.0" y="36" width="600" height="162"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="162" id="4hx-nM-uyd"/>
+                                        </constraints>
+                                        <date key="date" timeIntervalSinceReferenceDate="456781746.11185402">
+                                            <!--2015-06-23 19:49:06 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="mudarValorDatePicker:" destination="ysB-Mm-vUl" eventType="valueChanged" id="ZVX-9q-SHh"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85620481110000002" green="0.10423537400000001" blue="0.1062980458" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ayN-7d-dhA" secondAttribute="trailing" id="9bo-lV-7dY"/>
+                                    <constraint firstItem="ayN-7d-dhA" firstAttribute="top" secondItem="nIj-EY-Zhi" secondAttribute="top" id="A52-K8-kbk"/>
+                                    <constraint firstAttribute="trailing" secondItem="AZj-Sy-HRk" secondAttribute="trailing" constant="-16" id="Hwv-eu-nEi"/>
+                                    <constraint firstAttribute="bottom" secondItem="ayN-7d-dhA" secondAttribute="bottom" id="MZ2-eE-H0m"/>
+                                    <constraint firstItem="ayN-7d-dhA" firstAttribute="leading" secondItem="nIj-EY-Zhi" secondAttribute="leading" id="NXr-Nc-Uxb"/>
+                                    <constraint firstItem="AZj-Sy-HRk" firstAttribute="leading" secondItem="nIj-EY-Zhi" secondAttribute="leading" constant="-16" id="OxA-io-B7e"/>
+                                    <constraint firstAttribute="bottom" secondItem="ayN-7d-dhA" secondAttribute="bottom" id="Ugb-Ig-dcn"/>
+                                    <constraint firstAttribute="bottom" secondItem="AZj-Sy-HRk" secondAttribute="bottom" id="Vu4-fI-Jby"/>
+                                    <constraint firstItem="ayN-7d-dhA" firstAttribute="leading" secondItem="nIj-EY-Zhi" secondAttribute="leading" id="ifP-5H-B4f"/>
+                                    <constraint firstAttribute="height" constant="198" id="or8-2y-j5V"/>
+                                    <constraint firstAttribute="trailing" secondItem="ayN-7d-dhA" secondAttribute="trailing" id="oxy-tG-uSP"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="A52-K8-kbk"/>
+                                        <exclude reference="MZ2-eE-H0m"/>
+                                        <exclude reference="NXr-Nc-Uxb"/>
+                                        <exclude reference="oxy-tG-uSP"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLY-Nz-ime">
+                                <rect key="frame" x="0.0" y="353" width="600" height="198"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="clk-Jh-HGv">
+                                        <rect key="frame" x="0.0" y="36" width="600" height="162"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="162" id="Uf8-EW-4jI"/>
+                                        </constraints>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85620481110000002" green="0.10423537400000001" blue="0.1062980458" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="clk-Jh-HGv" secondAttribute="bottom" id="7iS-Vl-bSC"/>
+                                    <constraint firstAttribute="trailing" secondItem="clk-Jh-HGv" secondAttribute="trailing" id="DsP-7M-DgM"/>
+                                    <constraint firstAttribute="height" constant="198" id="kuk-DA-vDl"/>
+                                    <constraint firstItem="clk-Jh-HGv" firstAttribute="top" secondItem="oLY-Nz-ime" secondAttribute="top" id="ocX-Ar-JYK"/>
+                                    <constraint firstItem="clk-Jh-HGv" firstAttribute="leading" secondItem="oLY-Nz-ime" secondAttribute="leading" id="pTn-j5-xbH"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ocX-Ar-JYK"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmb-TY-ikQ">
+                                <rect key="frame" x="503" y="353" width="81" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Selecionar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="acaoSelecionar:" destination="ysB-Mm-vUl" eventType="touchUpInside" id="UVj-NR-b67"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="N5Q-gb-f7u" firstAttribute="leading" secondItem="4RU-A2-o1E" secondAttribute="leadingMargin" constant="10" id="3IG-dm-psc"/>
                             <constraint firstItem="N5Q-gb-f7u" firstAttribute="top" secondItem="YMu-06-oHz" secondAttribute="bottom" constant="8" id="3bk-Or-RMO"/>
+                            <constraint firstItem="xmb-TY-ikQ" firstAttribute="trailing" secondItem="4RU-A2-o1E" secondAttribute="trailingMargin" id="9d6-UB-aNQ"/>
+                            <constraint firstItem="tYF-n8-X32" firstAttribute="top" secondItem="nIj-EY-Zhi" secondAttribute="bottom" id="9rb-NP-amy"/>
                             <constraint firstItem="6l0-Vq-UCZ" firstAttribute="top" secondItem="c90-HY-5Ph" secondAttribute="bottom" constant="25" id="BA6-cJ-Dql"/>
+                            <constraint firstItem="oLY-Nz-ime" firstAttribute="leading" secondItem="4RU-A2-o1E" secondAttribute="leadingMargin" constant="-16" id="CiF-0i-hcH"/>
                             <constraint firstItem="Ob0-Dt-oN6" firstAttribute="leading" secondItem="4RU-A2-o1E" secondAttribute="leadingMargin" constant="10" id="DoW-mx-LA5"/>
                             <constraint firstItem="oTd-tt-Tiy" firstAttribute="leading" secondItem="4RU-A2-o1E" secondAttribute="leadingMargin" constant="10" id="EaA-A8-QYr"/>
                             <constraint firstItem="oTd-tt-Tiy" firstAttribute="top" secondItem="Ob0-Dt-oN6" secondAttribute="bottom" constant="20" id="GkA-z4-PKG"/>
@@ -431,9 +523,15 @@
                             <constraint firstItem="a40-fk-57X" firstAttribute="centerY" secondItem="c90-HY-5Ph" secondAttribute="centerY" id="RAF-BH-iE4"/>
                             <constraint firstItem="a40-fk-57X" firstAttribute="leading" secondItem="c90-HY-5Ph" secondAttribute="trailing" constant="30" id="SI4-mz-feR"/>
                             <constraint firstItem="SVb-Il-MuF" firstAttribute="leading" secondItem="pOK-0g-K6c" secondAttribute="trailing" constant="30" id="SpW-KZ-w9q"/>
+                            <constraint firstItem="oLY-Nz-ime" firstAttribute="top" secondItem="xmb-TY-ikQ" secondAttribute="bottom" constant="-33" id="XMm-MQ-XfX"/>
+                            <constraint firstItem="tYF-n8-X32" firstAttribute="top" secondItem="oLY-Nz-ime" secondAttribute="bottom" id="ZeN-1O-ORg"/>
                             <constraint firstItem="YMu-06-oHz" firstAttribute="leading" secondItem="4RU-A2-o1E" secondAttribute="leadingMargin" constant="10" id="Zga-5d-OuQ"/>
+                            <constraint firstItem="nIj-EY-Zhi" firstAttribute="leading" secondItem="4RU-A2-o1E" secondAttribute="leadingMargin" constant="-16" id="Zxy-LR-Enm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nIj-EY-Zhi" secondAttribute="trailing" constant="-16" id="anp-pn-K44"/>
                             <constraint firstItem="c90-HY-5Ph" firstAttribute="leading" secondItem="4RU-A2-o1E" secondAttribute="leadingMargin" constant="30" id="c3E-Mm-c4u"/>
                             <constraint firstItem="YMu-06-oHz" firstAttribute="top" secondItem="Ob0-Dt-oN6" secondAttribute="bottom" constant="20" id="cMw-xB-kBh"/>
+                            <constraint firstItem="oLY-Nz-ime" firstAttribute="leading" secondItem="c90-HY-5Ph" secondAttribute="trailing" constant="-16" id="caP-8J-hjY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oLY-Nz-ime" secondAttribute="trailing" constant="-16" id="d5b-SI-g80"/>
                             <constraint firstItem="6l0-Vq-UCZ" firstAttribute="leading" secondItem="4RU-A2-o1E" secondAttribute="leadingMargin" constant="10" id="dll-x4-O8V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="N5Q-gb-f7u" secondAttribute="trailing" constant="40" id="dzW-XP-C8O"/>
                             <constraint firstItem="pOK-0g-K6c" firstAttribute="leading" secondItem="4RU-A2-o1E" secondAttribute="leadingMargin" constant="30" id="fdr-M2-nc4"/>
@@ -450,6 +548,7 @@
                                 <exclude reference="GkA-z4-PKG"/>
                                 <exclude reference="BA6-cJ-Dql"/>
                                 <exclude reference="y0a-ng-Cz2"/>
+                                <exclude reference="caP-8J-hjY"/>
                             </mask>
                         </variation>
                     </view>
@@ -462,8 +561,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="dataLabel" destination="c90-HY-5Ph" id="wgX-MR-ICA"/>
+                        <outlet property="datePicker" destination="ayN-7d-dhA" id="J5y-th-eQA"/>
+                        <outlet property="datePickerSubView" destination="nIj-EY-Zhi" id="aFt-Qp-vTC"/>
                         <outlet property="disciplinaTextField" destination="Ob0-Dt-oN6" id="sqY-Q8-oUR"/>
                         <outlet property="notaTextField" destination="N5Q-gb-f7u" id="mkN-EA-df7"/>
+                        <outlet property="pickerView" destination="clk-Jh-HGv" id="s1Q-aC-JKN"/>
+                        <outlet property="pickerViewSubView" destination="oLY-Nz-ime" id="ZMO-Tk-xmi"/>
+                        <outlet property="selecionarBotao" destination="xmb-TY-ikQ" id="K9b-pX-dng"/>
                         <outlet property="tipoLabel" destination="pOK-0g-K6c" id="kYr-dO-AjE"/>
                     </connections>
                 </viewController>
