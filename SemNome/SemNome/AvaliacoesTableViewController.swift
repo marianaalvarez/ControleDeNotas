@@ -60,9 +60,10 @@ class AvaliacoesTableViewController: UITableViewController {
         if editingStyle == .Delete {
             let atividade = atividades[indexPath.row] as Atividade
             for notification in UIApplication.sharedApplication().scheduledLocalNotifications as! [UILocalNotification] {
-                println(notification.userInfo!["atividade"]!)
-                
-                if (notification.userInfo!["disciplina"] as! String == atividade.disciplina.nome && notification.userInfo!["atividade"] as! String == atividade.nome) {
+                //println(notification.userInfo!["atividade"]!)
+                if (
+                    //notification.userInfo!["disciplina"] as! String == atividade.disciplina.nome && 
+                    notification.userInfo!["atividade"] as! String == atividade.nome) {
                     UIApplication.sharedApplication().cancelLocalNotification(notification)
                 }
             }

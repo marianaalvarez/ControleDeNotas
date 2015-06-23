@@ -17,6 +17,10 @@ class DetailTableViewController: UITableViewController {
         
         navigationItem.title = atividade?.nome
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

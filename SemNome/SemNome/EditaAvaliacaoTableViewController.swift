@@ -18,7 +18,7 @@ class EditaAvaliacaoTableViewController: UITableViewController, UIPickerViewDele
     @IBOutlet weak var tipoAvaliacao: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var notaAvaliacao: UITextField!
-    let tiposDeAvaliacoes = ["Prova","Trabalho"]
+    let tiposDeAvaliacoes = ["Trabalho","Prova"]
     var atividade: Atividade?
     
     override func viewDidLoad() {
@@ -37,9 +37,9 @@ class EditaAvaliacaoTableViewController: UITableViewController, UIPickerViewDele
         
         if atividade?.tipo == 0 {
             tipoAvaliacao.text = "Trabalho"
-            pickerView.selectRow(1, inComponent: 0, animated: true)
         } else {
             tipoAvaliacao.text = "Prova"
+            pickerView.selectRow(1, inComponent: 0, animated: true)
         }
         
         notaAvaliacao.text! = "\(atividade!.nota)"
