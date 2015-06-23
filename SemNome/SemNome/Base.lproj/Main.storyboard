@@ -342,7 +342,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="863-cJ-NY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1540" y="881"/>
+            <point key="canvasLocation" x="1540" y="1631"/>
         </scene>
         <!--Nova Atividade-->
         <scene sceneID="rLl-M4-KXU">
@@ -723,39 +723,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0r-EC-UpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2281" y="874"/>
-        </scene>
-        <!--Inicio View Controller-->
-        <scene sceneID="dRO-XP-hHo">
-            <objects>
-                <viewController id="0BD-pn-ACl" customClass="InicioViewController" customModule="SemNome" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ybI-hj-hgY"/>
-                        <viewControllerLayoutGuide type="bottom" id="amP-rZ-foM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FeO-nK-MbD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="jyl-RU-Wc4">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="jyl-RU-Wc4" secondAttribute="trailing" constant="-16" id="Qgi-eq-RvC"/>
-                            <constraint firstItem="amP-rZ-foM" firstAttribute="top" secondItem="jyl-RU-Wc4" secondAttribute="bottom" id="VNI-2W-4Pd"/>
-                            <constraint firstItem="jyl-RU-Wc4" firstAttribute="leading" secondItem="FeO-nK-MbD" secondAttribute="leadingMargin" constant="-16" id="ZjQ-Jy-8bj"/>
-                            <constraint firstItem="jyl-RU-Wc4" firstAttribute="top" secondItem="FeO-nK-MbD" secondAttribute="topMargin" id="eSe-6E-ui6"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <segue destination="qtV-Km-BNL" kind="presentation" identifier="segueInicial" modalTransitionStyle="crossDissolve" id="fjd-6B-uvF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3oI-Q8-sZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1517" y="132"/>
+            <point key="canvasLocation" x="2286" y="1631"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0uh-Es-cQN">
@@ -770,11 +738,66 @@
                     <connections>
                         <segue destination="7N6-Mt-pfF" kind="relationship" relationship="viewControllers" id="RYZ-rY-XWt"/>
                         <segue destination="63d-By-kbD" kind="relationship" relationship="viewControllers" id="qO4-yi-yUp"/>
+                        <segue destination="QFF-Dz-h3B" kind="relationship" relationship="viewControllers" id="wmN-7K-EFs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9pC-WT-Fap" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-738" y="132"/>
+        </scene>
+        <!--Boletim-->
+        <scene sceneID="RAb-A2-vUy">
+            <objects>
+                <tableViewController id="fvY-zR-8ZK" customClass="BoletimTableViewController" customModule="SemNome" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="H1y-re-V3S">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celulaBoletim" id="XTB-H7-xI8">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XTB-H7-xI8" id="dgj-uI-Ndh">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fvY-zR-8ZK" id="HEQ-RT-pTg"/>
+                            <outlet property="delegate" destination="fvY-zR-8ZK" id="wHc-qa-j0F"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Boletim" id="hCc-FU-Y9j"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sIq-iD-oVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="1631"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ped-y1-kJL">
+            <objects>
+                <navigationController id="QFF-Dz-h3B" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="boletimIcone" id="WHb-S9-zSn">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="boletimIconeSelecionado"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="H4Y-p1-OUG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.96392964879999998" green="0.98871519860000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.85620481110000002" green="0.10423537400000001" blue="0.1062980458" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96392964879999998" green="0.98871519860000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fvY-zR-8ZK" kind="relationship" relationship="rootViewController" id="PMi-DP-EiB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w24-fN-dYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-738" y="881"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g7w-Vu-ykA">
@@ -801,7 +824,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nW0-id-viA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-738" y="881"/>
+            <point key="canvasLocation" x="46" y="881"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v4c-5e-skg">
@@ -875,17 +898,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZ1-sY-INx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46" y="881"/>
+            <point key="canvasLocation" x="796" y="881"/>
         </scene>
     </scenes>
     <resources>
+        <image name="boletimIcone" width="32" height="32"/>
+        <image name="boletimIconeSelecionado" width="32" height="32"/>
         <image name="calendarioIcone" width="32" height="32"/>
         <image name="calendarioIconeSelecionado" width="32" height="32"/>
-        <image name="logo" width="400" height="400"/>
         <image name="notasIcone" width="32" height="32"/>
         <image name="notasIconeSelecionado" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WwU-o8-56p"/>
+        <segue reference="W2l-pJ-Q41"/>
     </inferredMetricsTieBreakers>
 </document>

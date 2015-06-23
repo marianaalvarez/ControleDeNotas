@@ -8,15 +8,24 @@
 
 import UIKit
 import CoreData
+import EventKit
 
 class DisciplinasTableViewController: UITableViewController, UITableViewDataSource {
 
     lazy var disciplinas = {
         return DisciplinaManager.sharedInstance.buscarDisciplinas()
     }()
+    let eventStore = EKEventStore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        eventStore.requestAccessToEntityType(EKEntityTypeReminder,
+            completion: { (granted: Bool, error: NSError!) in
+                if !granted {
+                    println("Access to store not granted")
+                }
+        })
         
         tabBarController?.tabBar.tintColor = UIColor.redColor()
     }
