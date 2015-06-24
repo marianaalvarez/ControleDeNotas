@@ -19,6 +19,7 @@ class EditarViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBOutlet weak var tipoLabel: UILabel!
     @IBOutlet weak var notaTextField: UITextField!
     @IBOutlet weak var selecionarBotao: UIButton!
+    @IBOutlet weak var pesoTextField: UITextField!
 
     @IBOutlet weak var datePickerSubView: UIView!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -56,6 +57,8 @@ class EditarViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         }
         
         notaTextField.text = "\(atividade!.nota)"
+        
+        pesoTextField.text = "\(atividade!.peso)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,6 +68,7 @@ class EditarViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         disciplinaTextField.resignFirstResponder()
         notaTextField.resignFirstResponder()
+        pesoTextField.resignFirstResponder()
         return true
     }
     
@@ -121,6 +125,11 @@ class EditarViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         if !notaTextField.text.isEmpty {
             var stringNota = notaTextField.text.stringByReplacingOccurrencesOfString(".", withString: ",", options: .LiteralSearch, range: nil)
             atividade?.nota = NSNumberFormatter().numberFromString(stringNota)!
+        }
+        
+        if !pesoTextField.text.isEmpty {
+            var stringPeso = pesoTextField.text.stringByReplacingOccurrencesOfString(".", withString: ",", options: .LiteralSearch, range: nil)
+            atividade?.peso = NSNumberFormatter().numberFromString(stringPeso)!
         }
         
         if tipoLabel.text == "Trabalho" {

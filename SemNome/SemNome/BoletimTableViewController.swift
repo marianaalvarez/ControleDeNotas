@@ -57,6 +57,7 @@ class BoletimTableViewController: UITableViewController {
             let item = disciplinasOrdenadas[indexPath.section].atividades.allObjects[indexPath.row] as! Atividade
             cell.textLabel?.text = item.nome
             cell.detailTextLabel?.text = "\(item.nota)"
+            cell.userInteractionEnabled = true
         } else {
             var soma = 0.0
             var peso = 0.0
@@ -66,7 +67,7 @@ class BoletimTableViewController: UITableViewController {
                 soma += atividade.nota.doubleValue * atividade.peso.doubleValue
                 peso += atividade.peso.doubleValue
             }
-            let media = soma/peso
+            let media = round(1000*(soma/peso))/1000
             cell.textLabel?.text = "Média"
             cell.detailTextLabel?.text = "\(media)"
             cell.userInteractionEnabled = false
