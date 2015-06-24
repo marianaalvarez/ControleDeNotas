@@ -74,7 +74,7 @@ class AvaliacoesTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let nova = segue.destinationViewController as? NovaAvaliacaoTableViewController {
+        if let nova = segue.destinationViewController as? NovaAvaliacaoViewController {
             nova.disciplina = disciplina
         } else if let detalhe = segue.destinationViewController as? DetailTableViewController {
             detalhe.atividade = atividades[tableView.indexPathForSelectedRow()!.row] as Atividade
