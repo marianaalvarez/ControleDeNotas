@@ -63,11 +63,15 @@ class BoletimTableViewController: UITableViewController {
             let disc = disciplinasOrdenadas[indexPath.section]
             for ativ in disc.atividades {
                 let atividade = ativ as! Atividade
-                soma = atividade.nota.doubleValue * atividade.peso.doubleValue
+                soma += atividade.nota.doubleValue * atividade.peso.doubleValue
+                println(soma)
                 peso += atividade.peso.doubleValue
+                println(peso)
             }
+            let media = soma/peso
             cell.textLabel?.text = "Média"
-            cell.detailTextLabel?.text = "\(soma/peso)"
+            cell.detailTextLabel?.text = "\(media)"
+            cell.userInteractionEnabled = false
         }
 
         return cell
