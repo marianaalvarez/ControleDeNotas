@@ -79,6 +79,7 @@ class NovaAvaliacaoTableViewController: UITableViewController, UIPickerViewDeleg
                     atividade.tipo = 1
                 }
                 atividade.disciplina = disciplina!
+                atividade.peso = 1
                 AtividadeManager.sharedInstance.salvar()
             
                 LocalNotificationManager.sharedInstance.criaNotificacao(atividade)

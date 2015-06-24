@@ -18,13 +18,13 @@
 		05DA20081B2F30250000424E /* NovaDisciplinaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA20071B2F30250000424E /* NovaDisciplinaTableViewController.swift */; };
 		05DA200A1B2F362A0000424E /* NovaAvaliacaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA20091B2F362A0000424E /* NovaAvaliacaoTableViewController.swift */; };
 		05ED02E61B39D7B5006D25C1 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED02E51B39D7B5006D25C1 /* LocalNotificationManager.swift */; };
-		05ED02EA1B3AD3A5006D25C1 /* Atividade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED02E91B3AD3A5006D25C1 /* Atividade.swift */; };
 		1753B0351B33B20D004EB42A /* Disciplina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753B0341B33B20D004EB42A /* Disciplina.swift */; };
 		1753B03B1B33DD7F004EB42A /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753B03A1B33DD7F004EB42A /* DetailTableViewController.swift */; };
 		176BBC061B333AA90097B179 /* AtividadeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BBC051B333AA90097B179 /* AtividadeManager.swift */; };
 		176BBC081B333AB60097B179 /* DisciplinaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BBC071B333AB60097B179 /* DisciplinaManager.swift */; };
 		1772DC001B39C8E4001A97FA /* BoletimTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1772DBFF1B39C8E4001A97FA /* BoletimTableViewController.swift */; };
 		1772DC021B39D0E0001A97FA /* EditarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1772DC011B39D0E0001A97FA /* EditarViewController.swift */; };
+		177F48C91B3AD75200BECF3D /* Atividade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177F48C81B3AD75200BECF3D /* Atividade.swift */; };
 		179A135C1B33648B0097F577 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179A135B1B33648B0097F577 /* CloudKit.framework */; };
 		179A135F1B3365610097F577 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A135E1B3365610097F577 /* CloudKitManager.swift */; };
 		179A13611B33658F0097F577 /* DisciplinaCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A13601B33658F0097F577 /* DisciplinaCloud.swift */; };
@@ -57,13 +57,13 @@
 		05DA20071B2F30250000424E /* NovaDisciplinaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovaDisciplinaTableViewController.swift; sourceTree = "<group>"; };
 		05DA20091B2F362A0000424E /* NovaAvaliacaoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovaAvaliacaoTableViewController.swift; sourceTree = "<group>"; };
 		05ED02E51B39D7B5006D25C1 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
-		05ED02E91B3AD3A5006D25C1 /* Atividade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Atividade.swift; path = ../Atividade.swift; sourceTree = "<group>"; };
 		1753B0341B33B20D004EB42A /* Disciplina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disciplina.swift; sourceTree = "<group>"; };
 		1753B03A1B33DD7F004EB42A /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		176BBC051B333AA90097B179 /* AtividadeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtividadeManager.swift; sourceTree = "<group>"; };
 		176BBC071B333AB60097B179 /* DisciplinaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinaManager.swift; sourceTree = "<group>"; };
 		1772DBFF1B39C8E4001A97FA /* BoletimTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoletimTableViewController.swift; sourceTree = "<group>"; };
 		1772DC011B39D0E0001A97FA /* EditarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditarViewController.swift; sourceTree = "<group>"; };
+		177F48C81B3AD75200BECF3D /* Atividade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atividade.swift; sourceTree = "<group>"; };
 		179A135A1B33647A0097F577 /* SemNome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SemNome.entitlements; sourceTree = "<group>"; };
 		179A135B1B33648B0097F577 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		179A135E1B3365610097F577 /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 		176BBC001B333A3D0097B179 /* Entidades */ = {
 			isa = PBXGroup;
 			children = (
-				05ED02E91B3AD3A5006D25C1 /* Atividade.swift */,
+				177F48C81B3AD75200BECF3D /* Atividade.swift */,
 				1753B0341B33B20D004EB42A /* Disciplina.swift */,
 				176BBC051B333AA90097B179 /* AtividadeManager.swift */,
 				176BBC071B333AB60097B179 /* DisciplinaManager.swift */,
@@ -294,7 +294,7 @@
 				05DA20081B2F30250000424E /* NovaDisciplinaTableViewController.swift in Sources */,
 				1753B03B1B33DD7F004EB42A /* DetailTableViewController.swift in Sources */,
 				179A13611B33658F0097F577 /* DisciplinaCloud.swift in Sources */,
-				05ED02EA1B3AD3A5006D25C1 /* Atividade.swift in Sources */,
+				177F48C91B3AD75200BECF3D /* Atividade.swift in Sources */,
 				1772DC021B39D0E0001A97FA /* EditarViewController.swift in Sources */,
 				05D46C651B222B25007F1031 /* SemNome.xcdatamodeld in Sources */,
 				176BBC081B333AB60097B179 /* DisciplinaManager.swift in Sources */,

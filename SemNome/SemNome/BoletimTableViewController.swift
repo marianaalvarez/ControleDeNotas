@@ -45,17 +45,31 @@ class BoletimTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return disciplinasOrdenadas[section].atividades.allObjects.count
+        return disciplinasOrdenadas[section].atividades.allObjects.count + 1
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("celulaBoletim", forIndexPath: indexPath) as! UITableViewCell
         
-        let item = disciplinasOrdenadas[indexPath.section].atividades.allObjects[indexPath.row] as! Atividade
-        cell.textLabel?.text = item.nome
-        cell.detailTextLabel?.text = "\(item.nota)"
-        
+        let numeroDeLinhas = disciplinasOrdenadas[indexPath.section].atividades.allObjects.count
+        if indexPath.row < numeroDeLinhas {
+            let item = disciplinasOrdenadas[indexPath.section].atividades.allObjects[indexPath.row] as! Atividade
+            cell.textLabel?.text = item.nome
+            cell.detailTextLabel?.text = "\(item.nota)"
+        } else {
+            var soma = 0.0
+            var peso = 0.0
+            let disc = disciplinasOrdenadas[indexPath.section]
+            for ativ in disc.atividades {
+                let atividade = ativ as! Atividade
+                soma = atividade.nota.doubleValue * atividade.peso.doubleValue
+                peso += atividade.peso.doubleValue
+            }
+            cell.textLabel?.text = "Média"
+            cell.detailTextLabel?.text = "\(soma/peso)"
+        }
+
         return cell
     }
     
