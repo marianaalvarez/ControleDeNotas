@@ -616,8 +616,8 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b30-6d-fVm" id="3ZK-sP-Qmx">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ligar/Desligar notificação" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoH-jE-Vkj">
-                                                    <rect key="frame" x="8" y="12" width="195" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ligar/Desligar Notificação" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoH-jE-Vkj">
+                                                    <rect key="frame" x="8" y="12" width="198" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -678,25 +678,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da Atividade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDH-v9-9Dc">
-                                <rect key="frame" x="26" y="84" width="147" height="21"/>
+                                <rect key="frame" x="26" y="84" width="146.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTd-tt-Tiy">
-                                <rect key="frame" x="26" y="319" width="36" height="21"/>
+                                <rect key="frame" x="26" y="319" width="36" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tipo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l0-Vq-UCZ">
-                                <rect key="frame" x="26" y="310" width="34" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l0-Vq-UCZ">
+                                <rect key="frame" x="26" y="387" width="34" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nota" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMu-06-oHz">
-                                <rect key="frame" x="26" y="162" width="37" height="21"/>
+                                <rect key="frame" x="26" y="162" width="37" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -706,20 +706,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DataLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c90-HY-5Ph">
-                                <rect key="frame" x="26" y="269" width="78" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TipoLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOK-0g-K6c">
-                                <rect key="frame" x="26" y="338" width="76" height="21"/>
+                                <rect key="frame" x="46" y="417" width="76" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a40-fk-57X">
-                                <rect key="frame" x="128" y="265" width="45" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a40-fk-57X">
+                                <rect key="frame" x="128" y="342" width="45" height="30"/>
                                 <state key="normal" title="Alterar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -727,8 +721,17 @@
                                     <action selector="alterarData:" destination="ysB-Mm-vUl" eventType="touchUpInside" id="O2k-Ak-Peq"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nIj-EY-Zhi">
-                                <rect key="frame" x="0.0" y="353" width="600" height="198"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVb-Il-MuF">
+                                <rect key="frame" x="152" y="413" width="45" height="30"/>
+                                <state key="normal" title="Alterar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alterarTipo:" destination="ysB-Mm-vUl" eventType="touchUpInside" id="ogF-dc-AXA"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIj-EY-Zhi">
+                                <rect key="frame" x="0.0" y="358" width="600" height="198"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZj-Sy-HRk">
                                         <rect key="frame" x="-16" y="36" width="632" height="162"/>
@@ -815,15 +818,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVb-Il-MuF">
-                                <rect key="frame" x="128" y="334" width="45" height="30"/>
-                                <state key="normal" title="Alterar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="alterarTipo:" destination="ysB-Mm-vUl" eventType="touchUpInside" id="ogF-dc-AXA"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDF-Fq-0mX">
+                                <rect key="frame" x="26" y="241" width="39" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RWD-EZ-3S3">
+                                <rect key="frame" x="26" y="269" width="518" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DataLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c90-HY-5Ph">
+                                <rect key="frame" x="26" y="346.5" width="78" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -852,7 +863,8 @@
                             <constraint firstItem="a40-fk-57X" firstAttribute="centerY" secondItem="c90-HY-5Ph" secondAttribute="centerY" id="RAF-BH-iE4"/>
                             <constraint firstItem="a40-fk-57X" firstAttribute="leading" secondItem="c90-HY-5Ph" secondAttribute="trailing" constant="30" id="SI4-mz-feR"/>
                             <constraint firstItem="SVb-Il-MuF" firstAttribute="leading" secondItem="pOK-0g-K6c" secondAttribute="trailing" constant="30" id="SpW-KZ-w9q"/>
-                            <constraint firstItem="c90-HY-5Ph" firstAttribute="leading" secondItem="4RU-A2-o1E" secondAttribute="leadingMargin" constant="10" id="WMj-Dz-4yp"/>
+                            <constraint firstItem="oTd-tt-Tiy" firstAttribute="top" secondItem="RWD-EZ-3S3" secondAttribute="bottom" constant="20" id="WYw-SG-B05"/>
+                            <constraint firstItem="c90-HY-5Ph" firstAttribute="leading" secondItem="4RU-A2-o1E" secondAttribute="leadingMargin" constant="10" id="Wyx-cx-eWp"/>
                             <constraint firstItem="oLY-Nz-ime" firstAttribute="top" secondItem="xmb-TY-ikQ" secondAttribute="bottom" constant="-33" id="XMm-MQ-XfX"/>
                             <constraint firstItem="YDF-Fq-0mX" firstAttribute="top" secondItem="N5Q-gb-f7u" secondAttribute="bottom" constant="20" id="Ybg-cV-ifY"/>
                             <constraint firstItem="tYF-n8-X32" firstAttribute="top" secondItem="oLY-Nz-ime" secondAttribute="bottom" id="ZeN-1O-ORg"/>
@@ -882,9 +894,10 @@
                             <mask key="constraints">
                                 <exclude reference="HV4-4a-llk"/>
                                 <exclude reference="GkA-z4-PKG"/>
+                                <exclude reference="iR6-Bn-j4G"/>
                                 <exclude reference="c3E-Mm-c4u"/>
-                                <exclude reference="RAF-BH-iE4"/>
-                                <exclude reference="SI4-mz-feR"/>
+                                <exclude reference="caP-8J-hjY"/>
+                                <exclude reference="p5c-0i-hOs"/>
                                 <exclude reference="BA6-cJ-Dql"/>
                                 <exclude reference="LPy-oA-ERp"/>
                                 <exclude reference="9BY-F3-Xa8"/>
@@ -893,7 +906,6 @@
                                 <exclude reference="fdr-M2-nc4"/>
                                 <exclude reference="w8g-KU-QdF"/>
                                 <exclude reference="y0a-ng-Cz2"/>
-                                <exclude reference="caP-8J-hjY"/>
                                 <exclude reference="SpW-KZ-w9q"/>
                             </mask>
                         </variation>

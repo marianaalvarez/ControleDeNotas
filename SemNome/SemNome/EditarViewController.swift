@@ -58,6 +58,7 @@ class EditarViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         
         notaTextField.text = "\(atividade!.nota)"
         
+        pesoTextField.text = "\(atividade!.peso)"
         if atividade?.tipo == 0 {
             pickerView.selectRow(0, inComponent: 0, animated: true)
         } else {
