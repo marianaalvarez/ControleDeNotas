@@ -12,6 +12,14 @@ class DetailTableViewController: UITableViewController {
 
     var atividade : Atividade?
     
+
+    @IBOutlet weak var disciplina: UILabel!
+    @IBOutlet weak var nota: UILabel!
+    @IBOutlet weak var data: UILabel!
+    @IBOutlet weak var tipo: UILabel!
+    @IBOutlet weak var notificacao: UISwitch!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -19,48 +27,21 @@ class DetailTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         tableView.reloadData()
         navigationItem.title = atividade?.nome
+        
+        disciplina.text = atividade?.disciplina.nome
+        nota.text = "\(atividade!.nota)"
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        data.text = dateFormatter.stringFromDate(atividade!.dia)
+        if atividade?.tipo == 1 {
+            tipo.text = "Prova"
+        } else {
+            tipo.text = "Trabalho"
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 4
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .Default, reuseIdentifier: "celulaDetalhe")
-
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
-        
-        var tipo = ""
-        if atividade?.tipo == 1 {
-            tipo = "Prova"
-        } else {
-            tipo = "Trabalho"
-        }
-        
-        switch indexPath.section {
-        case 0: cell.textLabel?.text = atividade?.disciplina.nome
-            break
-        case 1: cell.textLabel?.text = dateFormatter.stringFromDate(atividade!.dia)
-            break
-        case 2: cell.textLabel?.text = tipo
-            break
-        case 3: cell.textLabel?.text = "\(atividade!.nota)"
-            break
-        default: cell.textLabel?.text = "Inválido"
-        }
-        
-        return cell
     }
     
     // MARK: - Navigation
