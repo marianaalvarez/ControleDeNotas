@@ -42,7 +42,7 @@ class EditarViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     }
     
     override func viewWillAppear(animated: Bool) {
-        disciplinaTextField.placeholder = atividade?.nome
+        disciplinaTextField.text = atividade?.nome
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
@@ -55,7 +55,7 @@ class EditarViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
             tipoLabel.text = "Prova"
         }
         
-        notaTextField.placeholder = "\(atividade!.nota)"
+        notaTextField.text = "\(atividade!.nota)"
     }
 
     override func didReceiveMemoryWarning() {

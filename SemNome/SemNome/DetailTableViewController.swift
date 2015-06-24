@@ -38,11 +38,32 @@ class DetailTableViewController: UITableViewController {
         } else {
             tipo.text = "Trabalho"
         }
+        if atividade?.notificacao == 0 {
+            notificacao.setOn(false, animated: true)
+        } else {
+            notificacao.setOn(true, animated: true)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    @IBAction func switchAction(sender: AnyObject) {
+        if atividade!.notificacao == 0 {
+            atividade!.notificacao = 1
+            LocalNotificationManager.sharedInstance.criaNotificacao(atividade!)
+        } else {
+            atividade!.notificacao = 0
+            UIApplication.sharedApplication().cancelAllLocalNotifications()
+            
+            for atividade in AtividadeManager.sharedInstance.buscarAtividades() {
+                LocalNotificationManager.sharedInstance.criaNotificacao(atividade)
+            }
+        }
+        AtividadeManager.sharedInstance.salvar()
+    }
+    
     
     // MARK: - Navigation
     
