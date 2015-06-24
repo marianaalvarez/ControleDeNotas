@@ -15,7 +15,6 @@
 		05DA20041B2236D00000424E /* DisciplinasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA20031B2236D00000424E /* DisciplinasTableViewController.swift */; };
 		05DA20061B223A6A0000424E /* AvaliacoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA20051B223A6A0000424E /* AvaliacoesTableViewController.swift */; };
 		05DA20081B2F30250000424E /* NovaDisciplinaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA20071B2F30250000424E /* NovaDisciplinaTableViewController.swift */; };
-		05DA200A1B2F362A0000424E /* NovaAvaliacaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA20091B2F362A0000424E /* NovaAvaliacaoTableViewController.swift */; };
 		05ED02E61B39D7B5006D25C1 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED02E51B39D7B5006D25C1 /* LocalNotificationManager.swift */; };
 		1753B0351B33B20D004EB42A /* Disciplina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753B0341B33B20D004EB42A /* Disciplina.swift */; };
 		1753B03B1B33DD7F004EB42A /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753B03A1B33DD7F004EB42A /* DetailTableViewController.swift */; };
@@ -55,7 +54,6 @@
 		05DA20031B2236D00000424E /* DisciplinasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisciplinasTableViewController.swift; sourceTree = "<group>"; };
 		05DA20051B223A6A0000424E /* AvaliacoesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacoesTableViewController.swift; sourceTree = "<group>"; };
 		05DA20071B2F30250000424E /* NovaDisciplinaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovaDisciplinaTableViewController.swift; sourceTree = "<group>"; };
-		05DA20091B2F362A0000424E /* NovaAvaliacaoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovaAvaliacaoTableViewController.swift; sourceTree = "<group>"; };
 		05ED02E51B39D7B5006D25C1 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		1753B0341B33B20D004EB42A /* Disciplina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disciplina.swift; sourceTree = "<group>"; };
 		1753B03A1B33DD7F004EB42A /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 				05DA20031B2236D00000424E /* DisciplinasTableViewController.swift */,
 				05DA20071B2F30250000424E /* NovaDisciplinaTableViewController.swift */,
 				05DA20051B223A6A0000424E /* AvaliacoesTableViewController.swift */,
-				05DA20091B2F362A0000424E /* NovaAvaliacaoTableViewController.swift */,
 				177F48CA1B3AE33500BECF3D /* NovaAvaliacaoViewController.swift */,
 				1753B03A1B33DD7F004EB42A /* DetailTableViewController.swift */,
 				1772DC011B39D0E0001A97FA /* EditarViewController.swift */,
@@ -288,7 +285,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05DA200A1B2F362A0000424E /* NovaAvaliacaoTableViewController.swift in Sources */,
 				05ED02E61B39D7B5006D25C1 /* LocalNotificationManager.swift in Sources */,
 				176BBC061B333AA90097B179 /* AtividadeManager.swift in Sources */,
 				179A135F1B3365610097F577 /* CloudKitManager.swift in Sources */,

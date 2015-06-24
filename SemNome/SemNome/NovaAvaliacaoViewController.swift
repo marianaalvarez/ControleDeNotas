@@ -108,6 +108,7 @@ class NovaAvaliacaoViewController: UIViewController, UIPickerViewDelegate, UIPic
                     atividade.tipo = 1
                 }
                 atividade.disciplina = disciplina!
+                atividade.notificacao = 1
                 if pesoTextField.text.isEmpty {
                     atividade.peso = 1
                 } else {
