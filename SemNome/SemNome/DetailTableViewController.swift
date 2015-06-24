@@ -18,6 +18,7 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var data: UILabel!
     @IBOutlet weak var tipo: UILabel!
     @IBOutlet weak var notificacao: UISwitch!
+    @IBOutlet weak var peso: UILabel!
     
     
     override func viewDidLoad() {
@@ -30,6 +31,7 @@ class DetailTableViewController: UITableViewController {
         
         disciplina.text = atividade?.disciplina.nome
         nota.text = "\(atividade!.nota)"
+        peso.text = "\(atividade!.peso)"
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
         data.text = dateFormatter.stringFromDate(atividade!.dia)
