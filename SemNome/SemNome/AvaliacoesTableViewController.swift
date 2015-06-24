@@ -66,7 +66,9 @@ class AvaliacoesTableViewController: UITableViewController {
             UIApplication.sharedApplication().cancelAllLocalNotifications()
             
             for atividade in atividades {
-                LocalNotificationManager.sharedInstance.criaNotificacao(atividade)
+                if atividade.notificacao == 1 {
+                    LocalNotificationManager.sharedInstance.criaNotificacao(atividade)
+                }
             }
         }
     }

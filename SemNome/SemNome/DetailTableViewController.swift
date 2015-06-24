@@ -57,8 +57,12 @@ class DetailTableViewController: UITableViewController {
             atividade!.notificacao = 0
             UIApplication.sharedApplication().cancelAllLocalNotifications()
             
-            for atividade in AtividadeManager.sharedInstance.buscarAtividades() {
-                LocalNotificationManager.sharedInstance.criaNotificacao(atividade)
+            for disciplina in DisciplinaManager.sharedInstance.buscarDisciplinas() {
+                for atividade in disciplina.atividades.allObjects as! [Atividade] {
+                    if atividade.notificacao == 1 {
+                        LocalNotificationManager.sharedInstance.criaNotificacao(atividade)
+                    }
+                }
             }
         }
         AtividadeManager.sharedInstance.salvar()

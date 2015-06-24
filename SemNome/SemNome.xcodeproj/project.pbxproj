@@ -25,7 +25,6 @@
 		177F48C91B3AD75200BECF3D /* Atividade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177F48C81B3AD75200BECF3D /* Atividade.swift */; };
 		177F48CB1B3AE33500BECF3D /* NovaAvaliacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177F48CA1B3AE33500BECF3D /* NovaAvaliacaoViewController.swift */; };
 		177F48CE1B3AE87F00BECF3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 177F48CC1B3AE87F00BECF3D /* Main.storyboard */; };
-		179A135C1B33648B0097F577 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179A135B1B33648B0097F577 /* CloudKit.framework */; };
 		179A135F1B3365610097F577 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A135E1B3365610097F577 /* CloudKitManager.swift */; };
 		179A13611B33658F0097F577 /* DisciplinaCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A13601B33658F0097F577 /* DisciplinaCloud.swift */; };
 		179A13651B33A8680097F577 /* CalendarioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A13641B33A8680097F577 /* CalendarioTableViewController.swift */; };
@@ -76,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				179A135C1B33648B0097F577 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +229,7 @@
 						DevelopmentTeam = T6LWGN6HAV;
 						SystemCapabilities = {
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -430,7 +428,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SemNome/SemNome.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SemNome/Info.plist;
@@ -445,7 +442,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SemNome/SemNome.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SemNome/Info.plist;

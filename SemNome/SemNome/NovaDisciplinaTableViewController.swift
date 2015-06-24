@@ -24,10 +24,9 @@ class NovaDisciplinaTableViewController: UITableViewController, UITextFieldDeleg
         super.didReceiveMemoryWarning()
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         nomeDisciplina.resignFirstResponder()
         semestreDisciplina.resignFirstResponder()
-        return true
     }
 
     @IBAction func salvaDisciplina(sender: AnyObject) {

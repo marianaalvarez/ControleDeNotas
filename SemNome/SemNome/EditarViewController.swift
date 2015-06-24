@@ -12,7 +12,7 @@ class EditarViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
 
     var atividade: Atividade?
     var data : NSDate?
-    let tiposDeAvaliacoes = ["Prova","Trabalho"]
+    let tiposDeAvaliacoes = ["Trabalho","Prova"]
     
     @IBOutlet weak var disciplinaTextField: UITextField!
     @IBOutlet weak var dataLabel: UILabel!
@@ -56,16 +56,21 @@ class EditarViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         }
         
         notaTextField.text = "\(atividade!.nota)"
+        
+        if atividade?.tipo == 0 {
+            pickerView.selectRow(0, inComponent: 0, animated: true)
+        } else {
+            pickerView.selectRow(1, inComponent: 0, animated: true)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         disciplinaTextField.resignFirstResponder()
         notaTextField.resignFirstResponder()
-        return true
     }
     
     @IBAction func alterarData(sender: UIButton) {

@@ -30,7 +30,6 @@ class LocalNotificationManager {
         notification.userInfo = ["disciplina": atividade.disciplina.nome, "atividade": atividade.nome]
         notification.category = "ANOTAI_CATEGORY"
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        println(notification.userInfo!["atividade"]!)
         
     }
 }

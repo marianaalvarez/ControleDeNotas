@@ -50,10 +50,9 @@ class NovaAvaliacaoViewController: UIViewController, UIPickerViewDelegate, UIPic
         super.didReceiveMemoryWarning()
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         nomeTextField.resignFirstResponder()
         pesoTextField.resignFirstResponder()
-        return true
     }
     
     @IBAction func alterarData(sender: UIButton) {
