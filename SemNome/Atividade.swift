@@ -2,7 +2,7 @@
 //  Atividade.swift
 //  SemNome
 //
-//  Created by Guilherme Bayma on 6/18/15.
+//  Created by Mariana Alvarez on 24/06/15.
 //  Copyright (c) 2015 Mariana Alvarez. All rights reserved.
 //
 
@@ -16,6 +16,7 @@ class Atividade: NSManagedObject {
     @NSManaged var nome: String
     @NSManaged var nota: NSNumber
     @NSManaged var tipo: NSNumber
+    @NSManaged var notificacao: NSNumber
     @NSManaged var disciplina: Disciplina
-
+    
 }
