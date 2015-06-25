@@ -1,3 +1,3 @@
 # ControleDeNotas
-Mariana Alvarez de Carvalho
-Guilherme Bayma
+Mariana Alvarez de Carvalho,
+Guilherme Furbringer Bayma
